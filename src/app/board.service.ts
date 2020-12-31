@@ -18,8 +18,7 @@ export class BoardService {
     this.squares = this.afs.collection('squares').snapshotChanges().pipe(map(changes => {
       return changes.map(a => {
         const data = a.payload.doc.data() as Square;
-        data.id = a.payload.doc.id;
-        console.log(data);
+        data.id = a.payload.doc['id'];
         return data;
       })
     }))
