@@ -8,6 +8,8 @@ import { BoardComponent } from './board/board.component';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
+import { BoardService } from './board.service';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,7 @@ import { environment } from '../environments/environment';
     AngularFireModule.initializeApp(environment.firebase, 'colors-game'),
     AngularFirestoreModule
   ],
-  providers: [],
+  providers: [BoardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
