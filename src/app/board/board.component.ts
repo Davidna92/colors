@@ -31,6 +31,9 @@ export class BoardComponent implements OnInit {
     })
   }
 
+  changeColor(square: Square) {
+    this.boardService.updateColor(square);
+  }
 
 
 }

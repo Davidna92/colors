@@ -9,12 +9,12 @@ import { Square } from '../models/square';
 })
 export class SquareComponent implements OnInit {
   @Input() square: Square;
-  
+
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.square);
+    // console.log(this.square);
   }
 
 
