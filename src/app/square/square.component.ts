@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { BoardService } from '../board.service';
+import { Square } from '../models/square';
 
 @Component({
   selector: 'app-square',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./square.component.css']
 })
 export class SquareComponent implements OnInit {
+  @Input() square: Square;
+  
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.square);
   }
+
+
+
+
 
 }
