@@ -1,12 +1,29 @@
-main {
+.box {
   display: grid;
   grid-template-columns: 200px 200px 200px;
   grid-gap: 0px;
   justify-content: center;
+  width: 600px;
+  margin: 0 auto;
+  position: relative;
 }
 
+
+
+
+
+
 app-square {
-  border: 1px gray solid;
   height: 200px;
+  position: relative;
+  transform: perspective(500px) rotate(-20deg) skew(15deg);
+  box-shadow: -90px 75px 20px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
 }
+
+app-square:hover {
+  transform: perspective(500px) rotate(-40deg) skew(25deg) translate(50px, -50px);
+  box-shadow: 5px 15px 20px rgba(0, 0, 0, .3);
+}
+
 

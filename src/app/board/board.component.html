@@ -1,6 +1,8 @@
 <h1>Square Color Game</h1>
 
-<main>
-  <app-square *ngFor="let square of squares" [square]="square" (click)="changeColor(square)">
-  </app-square>
-</main>
+
+<div class="box">
+    <app-square *ngFor="let square of squares" [square]="square" (click)="changeColor(square)">
+    </app-square>
+</div>
+<h3>By David Nahum - davidnahum92@gmail.com</h3>
